@@ -1,0 +1,120 @@
+{
+  "identity": {
+    "persona": "E1 - The Anti-AI Designer",
+    "mission": "Create a weather dashboard that feels like a cockpit for the atmosphere. Visually stunning, data-rich, and emotionally resonant.",
+    "principles": [
+      "Fusion over Imitation: Mix Aerospace HUD aesthetics with Swiss Typography.",
+      "Emotion First: The UI should feel like the weather it's describing.",
+      "Content is King: Data is the hero. Legibility is paramount.",
+      "Negative Space: Don't clutter. Let the data breathe.",
+      "Contrast: High contrast for readability, subtle contrast for hierarchy."
+    ]
+  },
+  "typography": {
+    "fonts": [
+      {
+        "family": "Oswald",
+        "url": "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap",
+        "usage": "Headings, City Names, Large Temperatures (Display)"
+      },
+      {
+        "family": "Manrope",
+        "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap",
+        "usage": "Body text, Data labels, UI elements"
+      }
+    ],
+    "rules": {
+      "headings": "font-oswald uppercase tracking-tight font-medium",
+      "body": "font-manrope tracking-normal",
+      "data_large": "font-oswald font-bold tracking-tighter",
+      "data_label": "font-manrope text-xs uppercase tracking-widest text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "base": {
+        "light": "bg-slate-50 text-slate-900",
+        "dark": "bg-[#0B1120] text-slate-50"
+      },
+      "glass": {
+        "light": "bg-white/60 backdrop-blur-xl border-white/40 shadow-sm",
+        "dark": "bg-slate-900/40 backdrop-blur-xl border-white/10 shadow-2xl"
+      },
+      "accents": {
+        "primary": "text-sky-400",
+        "warning": "text-amber-400",
+        "danger": "text-rose-500",
+        "success": "text-emerald-400"
+      }
+    },
+    "gradients": {
+      "sunny": "from-amber-200 to-orange-100",
+      "cloudy": "from-slate-200 to-gray-200",
+      "rainy": "from-blue-800 to-slate-900",
+      "night": "from-indigo-950 to-slate-950"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid Protocol",
+    "container": "max-w-7xl mx-auto p-4 md:p-8 lg:p-12",
+    "spacing": {
+      "section_gap": "gap-6 md:gap-8",
+      "internal_padding": "p-6"
+    },
+    "structure": {
+      "hero": "col-span-full lg:col-span-8 row-span-2",
+      "map": "col-span-full lg:col-span-4 row-span-2 min-h-[300px]",
+      "forecast_strip": "col-span-full",
+      "detail_card": "col-span-1 md:col-span-2 lg:col-span-3"
+    }
+  },
+  "components": {
+    "ui_library": "shadcn/ui",
+    "customization": {
+      "card": "rounded-3xl border-0 shadow-none",
+      "button": "rounded-full font-manrope font-semibold tracking-wide",
+      "input": "rounded-full bg-secondary/50 border-transparent focus:border-primary/50 focus:bg-background transition-all"
+    },
+    "visual_enhancers": [
+      "Glassmorphism for all data containers",
+      "Subtle noise texture overlay on background",
+      "Animated weather icons (Lottie or React Icons with motion)"
+    ]
+  },
+  "images": {
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1646180569870-fa21da251597?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxkcmFtYXRpYyUyMHN0b3JteSUyMHNreSUyMGRhcmslMjBjbG91ZHN8ZW58MHx8fHwxNzY1NTI0OTY3fDA&ixlib=rb-4.1.0&q=85",
+        "category": "stormy",
+        "description": "Dramatic storm clouds"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1738907181223-404f836b6456?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxzdW5ueSUyMGNsZWFyJTIwYmx1ZSUyMHNreSUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzY1NTI0OTY4fDA&ixlib=rb-4.1.0&q=85",
+        "category": "sunny",
+        "description": "Clear blue sky"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1760969115137-daf2a92808be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxmb2dneSUyMGNpdHklMjBzdHJlZXQlMjBtb3JuaW5nfGVufDB8fHx8MTc2NTUyNDk2OXww&ixlib=rb-4.1.0&q=85",
+        "category": "foggy",
+        "description": "Foggy city street"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'lucide-react', 'framer-motion', 'clsx', 'tailwind-merge' immediately.",
+    "2. FONTS: Add the Google Fonts links to 'index.html' or import in 'index.css'.",
+    "3. THEME: Implement a 'ThemeProvider' that supports system/light/dark modes. Default to system.",
+    "4. LAYOUT: Build the 'Bento Grid' structure first. Do not just stack divs.",
+    "5. COMPONENTS: Use Shadcn for complex interactions (Dialog, Dropdown, Toast) but style them with the 'Glass' aesthetic defined in colors.",
+    "6. DATA: Mock the weather data initially if API is not ready, but ensure the UI handles all states (loading, error, success).",
+    "7. MOTION: Add simple entrance animations (fade-in + slide-up) to all dashboard cards using framer-motion.",
+    "8. TESTING: Add 'data-testid' to all interactive elements (search input, toggle buttons, forecast cards)."
+  ],
+  "universal_guidelines": [
+    "Avoid generic 'AI slop' designs. Be bold with spacing and typography.",
+    "Dark mode should be deep blue/slate, not pure black.",
+    "Use 'sonner' for toasts.",
+    "Ensure all text has sufficient contrast (APCA/WCAG AA).",
+    "Mobile responsiveness is critical - stack the bento grid on small screens."
+  ]
+}
